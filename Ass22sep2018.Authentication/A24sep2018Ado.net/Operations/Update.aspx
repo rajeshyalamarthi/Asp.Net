@@ -66,6 +66,7 @@
 <%--        <asp:Button ID="Button1" runat="server" Text="INSERT" OnClick="Button1_Click1" />--%>
         <asp:Button ID="Button2" runat="server" Text="UPDATE" OnClick="Button2_Click" />
             </div>
+        </div>
       
      <%--   <asp:Button ID="Button3" runat="server" Text="DELETE" OnClick="Button3_Click" />--%> 
 </asp:Content>
