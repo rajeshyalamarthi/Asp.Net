@@ -12,9 +12,13 @@
 
         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
 
+      
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>     <div>
+
+              <asp:Button ID="Button1" runat="server" Text="Update" BorderStyle="Ridge" BorderColor="#cc0000" BackColor="#003366" OnClick="Button1_Click" />
+        <asp:Button ID="Button2" runat="server" Text="Delete" BorderStyle="Ridge" BorderColor="#cc0000" BackColor="#003366" OnClick="Button2_Click" />
         </div>
     </form>
 </body>

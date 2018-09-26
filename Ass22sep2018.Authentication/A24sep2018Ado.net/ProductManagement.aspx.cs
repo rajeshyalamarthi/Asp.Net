@@ -17,7 +17,7 @@ namespace A24sep2018Ado.net
         {
             if (!Context.User.IsInRole("Product"))
             {
-                Response.Redirect("Default1.aspx");
+                //Response.Redirect("Default1.aspx");
                 Response.Redirect("Default.aspx");
 
 

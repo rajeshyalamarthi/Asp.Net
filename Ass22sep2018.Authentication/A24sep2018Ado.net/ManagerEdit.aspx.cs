@@ -26,6 +26,8 @@ namespace A24sep2018Ado.net
             tb.Rows.Add(tRow);
             HyperLink hl;
             Label lb1;
+
+
             //HyperLink h5 = new HyperLink();
             //PlaceHolder1.Controls.Add(h5);
             //h5.NavigateUrl = "Update.aspx?Id=" + Pl;
@@ -57,12 +59,12 @@ namespace A24sep2018Ado.net
 
                 HyperLink h3 = new HyperLink();
                 PlaceHolder1.Controls.Add(h3);
-                h3.NavigateUrl = "Update.aspx?Id=" + Pl;
+                h3.NavigateUrl = "ProductDetails.aspx?Id=" + Pl;
                 h3.Text = "UPDATE";
                 h3.Width = 250;
                 HyperLink h4 = new HyperLink();
                 PlaceHolder1.Controls.Add(h4);
-                h4.NavigateUrl = "Update.aspx?Id=" + Pl;
+                h4.NavigateUrl = "ProductDetails.aspx?Id=" + Pl;
                 h4.Text = "DELETE";
                 h4.Width = 300;
                 //Console.WriteLine(Environment.NewLine);
@@ -70,5 +72,9 @@ namespace A24sep2018Ado.net
             }
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Insert.aspx");
+        }
     }
     }

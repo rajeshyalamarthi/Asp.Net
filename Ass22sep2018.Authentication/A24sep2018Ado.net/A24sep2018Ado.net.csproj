@@ -167,9 +167,12 @@
     <Content Include="Content\Redmi-Black-A1-64-MB-SDL171943867-3-1f01f.jpeg" />
     <Content Include="Content\sony-xperia-xa1-ultra-2017-3.jpg" />
     <Content Include="Content\Xperia Solo.jpg" />
+    <Content Include="Operations\Delete.aspx" />
     <Content Include="first.css" />
+    <Content Include="Images\mobile_phone_25.png" />
+    <Content Include="Images\Redmi-Black-A1-64-MB-SDL171943867-3-1f01f.jpeg" />
+    <Content Include="Operations\Insert.aspx" />
     <Content Include="ManagerEdit.aspx" />
-    <Content Include="Modify.aspx" />
     <Content Include="OrderManagement.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -236,7 +239,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Update.aspx" />
+    <Content Include="Operations\Update.aspx" />
     <Content Include="User.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -350,19 +353,26 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Operations\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operations\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operations\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ManagerEdit.aspx.cs">
       <DependentUpon>ManagerEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ManagerEdit.aspx.designer.cs">
       <DependentUpon>ManagerEdit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderManagement.aspx.cs">
       <DependentUpon>OrderManagement.aspx</DependentUpon>
@@ -415,11 +425,11 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Update.aspx.cs">
+    <Compile Include="Operations\Update.aspx.cs">
       <DependentUpon>Update.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Update.aspx.designer.cs">
+    <Compile Include="Operations\Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.aspx.cs">

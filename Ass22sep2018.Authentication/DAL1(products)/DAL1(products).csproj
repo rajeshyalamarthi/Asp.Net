@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Disconnected\DisconnectedRepo.cs" />
     <Compile Include="Model\Products.cs" />
     <Compile Include="ProductRepo\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
