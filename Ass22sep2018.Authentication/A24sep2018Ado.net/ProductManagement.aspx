@@ -2,15 +2,15 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-  <h3>Click to ViewProducts<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-      <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button2_Click" />
-    </h3>
-
-    <asp:Button ID="Button1" runat="server" Text="DisplayProducts" OnClick="Button1_Click" />
-
-    <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+  <h2>
+  <asp:Button ID="Button1" runat="server" Text="DisplayProducts" OnClick="Button1_Click" />
+    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button2_Click" />
+     <asp:Button ID="Button3" runat="server" Text="EDIT" OnClick="Button3_Click" />
+  
+ <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
     <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder>
-    <asp:Button ID="Button3" runat="server" Text="EDIT" OnClick="Button3_Click" />
+   </h2>
 <%--    <asp:GridView ID="GridView1" runat="server"></asp:GridView>--%>
    
     <%--<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
