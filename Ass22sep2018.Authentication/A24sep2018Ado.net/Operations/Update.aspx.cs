@@ -34,14 +34,14 @@ namespace A24sep2018Ado.net
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
+            int b = Convert.ToInt32(Request.QueryString["Id"]);
+            int a = b + 1;
             ProductRepository productRepository = new ProductRepository();
 
 
-            int b = Convert.ToInt32(Request.QueryString["Id"]);
-            int a = b + 1;
             productRepository.Update(a, TextBox2.Text, Convert.ToSingle(TextBox3.Text), TextBox4.Text, TextBox5.Text, Convert.ToInt32(DropDownList1.SelectedValue));
 
-            //Response.Redirect("/ProductManagement.aspx");
+            Response.Redirect("/ProductManagement.aspx");
 
 
             //protected void Button1_Click(object sender, EventArgs e)
