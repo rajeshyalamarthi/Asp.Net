@@ -106,9 +106,11 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - <a href="www.KiwiCart.com"></a></p>
+                <p>&copy; <%: DateTime.Now.Year %> - <a href="https://www.safety.kiwi/basket.html">Visit our KIWI CART</a></p>
             </footer>
         </div>
     </form>
 </body>
 </html>
+
+<img src="http://localhost:62184/Images/bgr-oneplus-5t-1.jpg" /><img src="http://localhost:62184/Images/Redmi-Black-A1-64-MB-SDL171943867-3-1f01f.jpeg" />

@@ -11,7 +11,11 @@ namespace Ass22sep2018.Authentication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Context.User.IsInRole("Product"))
+            {
+                
+                Response.Redirect("Default.aspx");
+            }
         }
     }
 }
