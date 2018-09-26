@@ -6,7 +6,7 @@
       <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button2_Click" />
     </h3>
 
-    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" Text="DisplayProducts" OnClick="Button1_Click" />
 
     <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
     <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder>

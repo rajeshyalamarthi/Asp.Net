@@ -43,32 +43,23 @@ namespace A24sep2018Ado.net
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            int a = Convert.ToInt32(Request.QueryString["Id"]);
-            Response.Redirect("/Operations/Update.aspx?Id=" + a);
-        }
+        //protected void Button1_Click(object sender, EventArgs e)
+        //{
+        //    int a = Convert.ToInt32(Request.QueryString["Id"]);
+        //    Response.Redirect("/Operations/Update.aspx?Id=" + a);
+        //}
 
 
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            int s = Convert.ToInt32(Request.QueryString["Id"]);
+        //protected void Button2_Click(object sender, EventArgs e)
+        //{
+        //    int s = Convert.ToInt32(Request.QueryString["Id"]);
+        //    int a = s + 1;
 
-            using (SqlConnection connection2 = new SqlConnection())
-            {
-                connection2.ConnectionString = "Data Source=Acupc_120;Initial Catalog=Auth1;Integrated Security=True";
-                connection2.Open();
+        //    ProductRepository productRepository = new ProductRepository();
+        //    productRepository.Delete(a);
 
-                SqlCommand sqlCommand = new SqlCommand("cartproc", connection2);
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.Add("@Action", SqlDbType.VarChar, 10).Value = "DELETE";
-
-                sqlCommand.Parameters.Add("@ProductId", SqlDbType.Int, 5).Value = s;
-                sqlCommand.ExecuteNonQuery();
-
-                Response.Redirect("ProductManagement.aspx");
-
-            }
-        }
+        //    Response.Redirect("ProductManagement.aspx");
+          
+        //}
     }
 }

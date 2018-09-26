@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL1_products_.ProductRepo;
 
 namespace A24sep2018Ado.net
 {
@@ -14,6 +15,21 @@ namespace A24sep2018Ado.net
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            int s = Convert.ToInt32(Request.QueryString["Id"]);
+            ProductRepository repo = new ProductRepository();
+            repo.getDetails();
+            Image image = new Image();
+            PlaceHolder1.Controls.Add(image);
+            image.ImageUrl = repo.productslist[s].ProductUrl;
+            Label la = new Label();
+            PlaceHolder1.Controls.Add(la);
+            Label1.Text = repo.productslist[s].PName;
+            Label2.Text = Convert.ToString(repo.productslist[s].Price);
+            Label3.Text = repo.productslist[s].Description;
+
+
 
         }
 
@@ -97,8 +113,23 @@ namespace A24sep2018Ado.net
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            ProductRepository productRepository = new ProductRepository();
+        
+
             int b = Convert.ToInt32(Request.QueryString["Id"]);
             int a = b + 1;
+            productRepository.Update(a, TextBox2.Text, Convert.ToSingle(TextBox3.Text), TextBox4.Text, TextBox5.Text, Convert.ToInt32(DropDownList1.SelectedValue));
+
+            Response.Redirect("/ProductManagement.aspx");
+
+
+
+
+
+
+
+
+
             //int a = Convert.ToInt32( TextBox1.Text);
             //int b = a - 1;
 
@@ -106,43 +137,18 @@ namespace A24sep2018Ado.net
 
             //ProductDetails productDetails = new ProductDetails();
             //productDetails.
-            using (SqlConnection connection1 = new SqlConnection())
-            {
-
-                // using data adapters
-                connection1.ConnectionString = "Data Source=Acupc_120;Initial Catalog=Auth1;Integrated Security=True";
-
-                connection1.Open();
-                SqlCommand sqlCommand = new SqlCommand("cartproc", connection1);
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.Add("@Action", SqlDbType.VarChar, 10).Value = "UPDATE";
-
-                sqlCommand.Parameters.Add("@ProductId", SqlDbType.Int, 5).Value = a;
-                sqlCommand.Parameters.Add("@PName", SqlDbType.VarChar, 50).Value = TextBox2.Text;
-                sqlCommand.Parameters.Add("@Price", SqlDbType.Float, 50).Value = TextBox3.Text;
-                sqlCommand.Parameters.Add("@ImageUrl", SqlDbType.VarChar, 50).Value = TextBox4.Text;
-                sqlCommand.Parameters.Add("@Description", SqlDbType.VarChar, 500).Value = TextBox5.Text;
-                sqlCommand.Parameters.Add("@BrandId", SqlDbType.Int, 5).Value = DropDownList1.SelectedValue;
-                sqlCommand.ExecuteNonQuery();
-
-                Response.Redirect("/ProductManagement.aspx");
-            }
-        }
-
-        //protected void Button3_Click(object sender, EventArgs e)
-        //{
-        //    //using (SqlConnection connection2 = new SqlConnection())
+            //using (SqlConnection connection1 = new SqlConnection())
             //{
-            //    connection2.ConnectionString = "Data Source=Acupc_120;Initial Catalog=Auth1;Integrated Security=True";
 
-            //    connection2.Open();
-            //    SqlCommand sqlCommand = new SqlCommand("cartproc", connection2);
+            //    // using data adapters
+            //    connection1.ConnectionString = "Data Source=Acupc_120;Initial Catalog=Auth1;Integrated Security=True";
+
+            //    connection1.Open();
+            //    SqlCommand sqlCommand = new SqlCommand("cartproc", connection1);
             //    sqlCommand.CommandType = CommandType.StoredProcedure;
-            //    sqlCommand.Parameters.Add("@Action", SqlDbType.VarChar, 10).Value = "DELETE";
+            //    sqlCommand.Parameters.Add("@Action", SqlDbType.VarChar, 10).Value = "UPDATE";
 
-
-
-            //    sqlCommand.Parameters.Add("@ProductId", SqlDbType.Int, 5).Value = TextBox1.Text;
+            //    sqlCommand.Parameters.Add("@ProductId", SqlDbType.Int, 5).Value = a;
             //    sqlCommand.Parameters.Add("@PName", SqlDbType.VarChar, 50).Value = TextBox2.Text;
             //    sqlCommand.Parameters.Add("@Price", SqlDbType.Float, 50).Value = TextBox3.Text;
             //    sqlCommand.Parameters.Add("@ImageUrl", SqlDbType.VarChar, 50).Value = TextBox4.Text;
@@ -150,7 +156,9 @@ namespace A24sep2018Ado.net
             //    sqlCommand.Parameters.Add("@BrandId", SqlDbType.Int, 5).Value = DropDownList1.SelectedValue;
             //    sqlCommand.ExecuteNonQuery();
 
+            //    
             //}
-        //}
+
+        }
     }
 }

@@ -1,9 +1,25 @@
 ﻿<%@ Page Title="Update" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Update.aspx.cs" Inherits="A24sep2018Ado.net.Update" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
     <div>
         <br />
         <br />
-        <h2>UPDATE</h2>
+        <h2>Information</h2>
+
+
+     
+    
+
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+        <br />
+      
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label><br />
+        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>  <div>
+
+
+            <h1 style="color:brown">Update Data Below</h1>
         <table style="width: 100%; border: 1px solid #FF0000; background-color: #245269">
            
         <%--      <tr>
@@ -49,6 +65,8 @@
         </table>
 <%--        <asp:Button ID="Button1" runat="server" Text="INSERT" OnClick="Button1_Click1" />--%>
         <asp:Button ID="Button2" runat="server" Text="UPDATE" OnClick="Button2_Click" />
-     <%--   <asp:Button ID="Button3" runat="server" Text="DELETE" OnClick="Button3_Click" />--%> </div>
+            </div>
+      
+     <%--   <asp:Button ID="Button3" runat="server" Text="DELETE" OnClick="Button3_Click" />--%> 
 </asp:Content>
 <%--<img src="Content/Redmi-Black-A1-64-MB-SDL171943867-3-1f01f.jpeg" />--%>
