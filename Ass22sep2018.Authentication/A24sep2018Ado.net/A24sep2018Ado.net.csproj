@@ -166,6 +166,9 @@
     <Content Include="Content\mobile_phone_25.png" />
     <Content Include="Content\Redmi-Black-A1-64-MB-SDL171943867-3-1f01f.jpeg" />
     <Content Include="Content\sony-xperia-xa1-ultra-2017-3.jpg" />
+    <Content Include="Content\testing1.jpg" />
+    <Content Include="Content\testing2.jpg" />
+    <Content Include="Content\testing3.png" />
     <Content Include="Content\Xperia Solo.jpg" />
     <Content Include="Operations\Delete.aspx" />
     <Content Include="first.css" />

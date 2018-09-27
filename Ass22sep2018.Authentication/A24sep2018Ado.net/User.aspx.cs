@@ -12,10 +12,43 @@ namespace A24sep2018Ado.net
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Context.User.IsInRole("User"))
-            {
+            //if (!Context.User.IsInRole("User"))
+            //{
 
-                Response.Redirect("Default.aspx");
+            //    Response.Redirect("Default.aspx");
+
+
+            //}
+
+            Table table = new Table();
+            table.ID = "1";
+            PlaceHolder1.Controls.Add(table);
+            ProductRepository repository = new ProductRepository();
+            repository.getDetails();
+            //int count1 = 0;
+
+            for (int count = 0; count < repository.productslist.Count; count++)
+            {
+                TableRow row = new TableRow();
+                table.Rows.Add(row);
+                //for (int cellcount = 0; cellcount < 2; cellcount++)
+                //{
+                TableCell cell = new TableCell();
+                row.Cells.Add(cell);
+                HyperLink hyper = new HyperLink();
+                Image image = new Image();
+
+                PlaceHolder1.Controls.Add(image);
+                image.ImageUrl = repository.productslist[count].ProductUrl;
+                PlaceHolder1.Controls.Add(hyper);
+                hyper.Text = repository.productslist[count].PName;
+                hyper.NavigateUrl = "ProductDetails.aspx?id=" + count;
+                Label label = new Label();
+                PlaceHolder1.Controls.Add(label);
+                label.Text = Convert.ToString(repository.productslist[count].Price);
+
+
+
 
 
             }

@@ -30,6 +30,17 @@ namespace A24sep2018Ado.net
             Label3.Text = repo.productslist[s].Description;
 
 
+            if (!IsPostBack)
+            {
+
+                TextBox2.Text = repo.productslist[s].PName;
+                TextBox3.Text = Convert.ToString(repo.productslist[s].Price);
+                TextBox4.Text = repo.productslist[s].ProductUrl;
+                TextBox5.Text = repo.productslist[s].Description;
+
+
+            }
+
 
         }
         protected void Button2_Click(object sender, EventArgs e)

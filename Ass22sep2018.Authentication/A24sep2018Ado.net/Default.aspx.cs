@@ -12,6 +12,7 @@ namespace A24sep2018Ado.net
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
         }
     }
 }

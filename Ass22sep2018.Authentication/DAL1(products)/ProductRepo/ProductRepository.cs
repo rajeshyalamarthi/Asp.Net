@@ -137,7 +137,7 @@ namespace DAL1_products_.ProductRepo
                 sqlCommand.Parameters.Add("@ProductId", SqlDbType.Int, 5).Value = ProductId;
                 sqlCommand.Parameters.Add("@PName", SqlDbType.VarChar, 50).Value = ProductName;
                 sqlCommand.Parameters.Add("@Price", SqlDbType.Float, 50).Value = Price;
-                sqlCommand.Parameters.Add("@ImageUrl", SqlDbType.VarChar, 50).Value = ImageUrl;
+                sqlCommand.Parameters.Add("@ImageUrl", SqlDbType.VarChar, 50).Value =ImageUrl;
                 sqlCommand.Parameters.Add("@Description", SqlDbType.VarChar, 500).Value = Description;
                 sqlCommand.Parameters.Add("@BrandId", SqlDbType.Int, 5).Value = BrandId;
 

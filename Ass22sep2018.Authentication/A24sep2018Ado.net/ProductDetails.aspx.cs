@@ -21,7 +21,7 @@ namespace A24sep2018Ado.net
             repo.getDetails();
             Image image = new Image();
             PlaceHolder1.Controls.Add(image);
-            image.ImageUrl = repo.productslist[s].ProductUrl;
+            image.ImageUrl =  repo.productslist[s].ProductUrl;
             Label la = new Label();
             PlaceHolder1.Controls.Add(la);
             Label1.Text = repo.productslist[s].PName;
